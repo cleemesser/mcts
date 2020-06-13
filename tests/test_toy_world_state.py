@@ -17,7 +17,7 @@ def test_perform():
     state = ToyWorldState((0,0), world, belief)
 
     outcomes = np.array([0., 0, 0, 0])
-    for i in range(n):
+    for _ in range(n):
         new_state = state.perform(state.actions[0])
         #print(new_state.belief[state.actions[0]])
 

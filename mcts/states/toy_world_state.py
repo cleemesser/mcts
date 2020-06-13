@@ -43,7 +43,7 @@ class ToyWorldState(object):
         if belief:
             self.belief = belief
         else:
-            self.belief = dict((a, np.array([1] * 4)) for a in self.actions)
+            self.belief = {a: np.array([1] * 4) for a in self.actions}
 
     def _correct_position(self, pos):
         upper = np.min(np.vstack((pos, self.world.size)), 0)
